@@ -8,7 +8,7 @@ This is our first version of the website.
 
 #### Do you want to contribute or Did you find any error in our website ?
 
-If you think there is any error in the working of website, or if you have an idea to make our website better or you simply want add any new feature then you are most welcome to raise an issue or to directly create a pull request.
+If you think there is any error in the working of website, or if you have an idea to make our website better or you simply want to add any new feature then you are most welcome to raise an issue or to directly create a pull request.
 
 #### Website hosted links
 
