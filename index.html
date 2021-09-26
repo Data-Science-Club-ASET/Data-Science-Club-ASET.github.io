@@ -63,9 +63,9 @@
           <ul class="nav-bar">
             <li><a href="#about" id="nav-about">About</a></li>
             <li><a href="#events" id="nav-events">Events</a></li>
-            <li><a href="#leaders" id="nav-leaders">Leaders</a></li>
+            <li><a href="#leaders" id="nav-leaders">Our Team</a></li>
             <li><a href="#social" id="nav-social">Social</a></li>
-            <li><a href="#register" id="nav-register">Register</a></li>
+            <li><a href="#register" id="nav-register">Contact Us</a></li>
             <li><a href="#hero" id="nav-home">
               <i class="fas fa-home"></i>
             </a></li>
@@ -92,9 +92,9 @@
           <ul class="ham-nav">
             <li><a href="#about" id="ham-nav-about">About</a></li>
             <li><a href="#events" id="ham-nav-events">Events</a></li>
-            <li><a href="#leaders" id="ham-nav-leaders">Leaders</a></li>
+            <li><a href="#leaders" id="ham-nav-leaders">Our Team</a></li>
             <li><a href="#social" id="ham-nav-social">Social</a></li>
-            <li><a href="#register" id="ham-nav-register">Register</a></li>
+            <li><a href="#register" id="ham-nav-register">Contact Us</a></li>
             <li><a href="#hero" id="ham-nav-home">Home
             </a></li>
           </ul>
@@ -140,14 +140,15 @@
           <h1 class="events-title">
             Events and Happenings
           </h1>
-          <p>This poster is from an event held of 26th August 2021 on Entrepreneurship. A lot of people attended the workshop and learnt something valuable from the keynote speaker Mr. Gundeep Singh.</p>
+          <p>Give your career a boost and learn how to improve your coding skills to get closer to your dream job. Join us upcoming thursday, 30th Sept for the exclusive Freshman Induction by Mr. Shantanu Shubham in collaboration with Coding Ninjas.
+          </p>
         </div>
-        <a href="#" class="events-cta">Count me in!</a>
+        <a href="https://bit.ly/3kF5e4O" class="events-cta" target="_blank">Count me in!</a>
       </div>
 
       <div class="events-rhs slide-from-bottom">
         <div class="poster-container">
-          <img src="./img/Poster.png" alt="Events">
+          <img src="./img/sept30event.jpg" alt="Events">
         </div>
       </div>
 
@@ -194,14 +195,14 @@
                   <h3>President</h3>
                 </div>
                 <div class="leader-info-links">
-                  <a href="https://www.instagram.com/swati.sarita/" target="_blank">
-                    <i class="fab fa-instagram"></i>
+                  <a href="https://github.com/swati-gwc" target="_blank">
+                    <i class="fab fa-github"></i>
                   </a>
                   <a href="https://www.linkedin.com/in/swati-tripathi-765615187/" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
-                  <a href="https://wa.me/919205543537" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
+                  <a href="https://twitter.com/SwatiTr06172888" target="_blank">
+                    <i class="fab fa-twitter"></i>
                   </a>
                 </div>
               </div>
@@ -244,15 +245,16 @@
           <div class="register-lhs slide-from-left">
             <div class="register-content">
               <h1 class="register-title">
-                JOIN US !
+                Contact Us !
               </h1>
-              <p>Are you passionate about Data Science? Do you fancy making top notch industry level projects? If your answer to all these questions is a yes, you are made for this club! Fill up the form and join our dynamic community today!</p>
+              <!-- <p>Are you passionate about Data Science? Do you fancy making top notch industry level projects? If your answer to all these questions is a yes, you are made for this club! Fill up the form and join our dynamic community today!</p> -->
+              <p>Do you want to contact us? Do you have any doubts? Do you want to join our team? Enter your details and queries in form and our team will reach out to you soon.</p>
             </div>
           </div>
 
           <div class="register-rhs slide-from-right">
             <div class="form-container">
-              <form action="POST" autocomplete="off">
+              <form  method="post" autocomplete="off" name="google-sheet">
                 <div class="form-inner-container">
 
                   <div class="form-element-container">
@@ -261,14 +263,14 @@
                   </div>
 
                   <div class="form-element-container">
-                    <input type="text" name="Class" id="form-class" placeholder="Class (ex: 5CSE-8Y)" class="form-element" required>
+                    <input name="PhoneNo" type="number" id="form-class" placeholder="Phone No" class="form-element" minlength="10" maxlength="10" required>
                     <span class="input-underline"></span>
                   </div>
 
-                  <div class="form-element-container">
+                  <!-- <div class="form-element-container">
                     <input type="text" name="Batch" id="form-batch" placeholder="Batch (ex: B.Tech CSE)" class="form-element" required>
                     <span class="input-underline"></span>
-                  </div>
+                  </div> -->
 
                   <div class="form-element-container">
                     <input type="email" name="Email" id="form-email" placeholder="Email" class="form-element" required>
@@ -276,11 +278,11 @@
                   </div>
 
                   <div class="form-element-container">
-                    <textarea name="Intro" id="form-intro" placeholder="Introduce yourself" class="form-element form-textarea" required></textarea>
+                    <textarea name="Query" id="form-intro" placeholder="Enter your query" class="form-element form-textarea" required maxlength="232"></textarea>
                     <span class="input-underline"></span>
                   </div>
 
-                  <input type="submit" value="Submit" id="form-submit" class="form-submit">
+                  <input type="submit" value="submit" id="form-submit" class="form-submit">
 
 
                 </div>
@@ -379,6 +381,19 @@
   },2000);
 
 </script>
-
+<!-- Below script is to use google sheet to fetch form responses -->
+<script type="text/javascript">
+  
+  
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzI_S9hdmF1cAw5q_v4zLA7rd0XXRvouDRlXWuETTeQMS1WD4Ua61GBGTRkUXdBUMM3xg/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("You have successfully submitted your form. Our Team will reach out to you soon"))
+            .catch(error => console.error('Error!', error.message))
+        })
+</script>
 </body>
 </html>

@@ -302,7 +302,7 @@ nav{
 #ham-nav-leaders:visited::after,
 #ham-nav-leaders:link::before,
 #ham-nav-leaders:visited::before{
-  content: "Leaders";
+  content: "Our Team";
 }
 #nav-social:link::after,
 #nav-social:visited::after,
@@ -322,7 +322,7 @@ nav{
 #ham-nav-register:visited::after,
 #ham-nav-register:link::before,
 #ham-nav-register:visited::before{
-  content: "Register";
+  content: "Contact Us";
   color: var(--tertiary-color);
 }
 #nav-home:link::after,
@@ -844,6 +844,20 @@ nav{
   transform: scaleX(1);
 }
 /* #endregion */
+
+/* Contact form input: Remove Arrows/Spinners- */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* Contact form input: Remove Arrows/Spinners--> Ends */
 
 /* #endregion */
 
